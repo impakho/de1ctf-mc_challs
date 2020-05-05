@@ -1,0 +1,27 @@
+{
+  "listen_address": "0.0.0.0:25565",
+  "max_players": 2147483648,
+  "motd": "De1Ta He4dl3ss M1neCrAft Te2t SeRv3r",
+  "restricted": false,
+  "logs": false,
+  "join_message": {
+    "text":"虚空世界 The LIMBO World",
+    "color":"dark_red"
+  },
+  "boss_bar": {
+    "text":"虚空世界 The LIMBO World",
+    "color":"dark_red"
+  },
+  "playerlist_header": {
+    "text":"\n\nHIDE FLAG ONE\n\n          imgur.com/a/ZOrErVM          \n\n",
+    "color":"black",
+    "bold":true
+  },
+  "enable_compression": false,
+  "compression_threshold": 256,
+  "buffer_config":  {
+    "handshake_address": 300,
+    "player_name": 32,
+    "chat_message": 2000000
+  }
+}

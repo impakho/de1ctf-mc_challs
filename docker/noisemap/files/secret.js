@@ -1,0 +1,1 @@
+module.exports.secret = 'Minecraft Noise Secret is: De1CTF{MCerrr_L0v3_P3r1iN_N0IsE-M4p?}';

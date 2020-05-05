@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    mc_noisemap:
+        build: .
+        image: mc_noisemap:latest
+        hostname: mc_noisemap
+        networks:
+          de1ctf-mc-net:
+            ipv4_address: 172.20.114.213
+
+networks:
+  de1ctf-mc-net:
+    external: true

@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+    mc_realworld_server:
+        build: .
+        image: mc_realworld_server:latest
+        hostname: mc_realworld_server
+        networks:
+          de1ctf-mc-net:
+            ipv4_address: 172.20.154.79
+        volumes:
+          - de1ctf-realworld-server-log:/home/realworld_server/log
+
+networks:
+  de1ctf-mc-net:
+    external: true
+
+volumes:
+  de1ctf-realworld-server-log:
+    external: true

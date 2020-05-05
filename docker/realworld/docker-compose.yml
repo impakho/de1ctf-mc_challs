@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+    mc_realworld:
+        build: .
+        image: mc_realworld:latest
+        hostname: mc_realworld
+        networks:
+          de1ctf-mc-net:
+            ipv4_address: 172.20.39.31
+        volumes:
+          - de1ctf-realworld-pipe:/home/realworld/pipe
+
+networks:
+  de1ctf-mc-net:
+    external: true
+
+volumes:
+  de1ctf-realworld-pipe:
+    external: true

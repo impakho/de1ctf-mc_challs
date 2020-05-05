@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+    mc_logclient:
+        build: .
+        image: mc_logclient:latest
+        hostname: mc_logclient
+        networks:
+          de1ctf-mc-net:
+            ipv4_address: 172.20.10.166
+        volumes:
+          - de1ctf-logclient-log:/home/logclient/log
+          - de1ctf-service-logs:/home/logclient/logs:ro
+
+networks:
+  de1ctf-mc-net:
+    external: true
+
+volumes:
+  de1ctf-logclient-log:
+    external: true
+  de1ctf-service-logs:
+    external: true

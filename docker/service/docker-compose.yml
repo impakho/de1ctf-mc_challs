@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+    mc_service:
+        build: .
+        image: mc_service:latest
+        extra_hosts:
+          - "mc_logclient:172.20.10.166"
+          - "mc_noisemap:172.20.114.213"
+          - "mc_realworld:172.20.39.31"
+          - "mc_realworld_server:172.20.154.79"
+        hostname: mc_service
+        networks:
+          de1ctf-mc-net:
+            ipv4_address: 172.20.20.20
+        ports:
+          - "80:80"
+          - "8080:8080"
+          - "25565:25565"
+        volumes:
+          - de1ctf-service-log:/home/service/log
+          - de1ctf-service-logs:/home/service/logs
+
+networks:
+  de1ctf-mc-net:
+    external: true
+
+volumes:
+  de1ctf-service-log:
+    external: true
+  de1ctf-service-logs:
+    external: true
