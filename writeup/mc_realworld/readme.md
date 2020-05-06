@@ -49,7 +49,7 @@ client to client的pwn题变得有趣多了，像极了A&D模式。
 
 非预期回传方式，参考上面 `mc_logclient` wp 的说明。
 
-漏洞点位于客户端 `add_messages` 函数。你可以通过 `bindiff` 找到它。代码大概如下：
+漏洞点位于客户端 `add_messages` 函数。你可以通过 `bindiff` 找到它（需要保证编译环境一致，编译器flags一致）。代码大概如下：
 
 ```
 if (text[0] == '@' && strlen(text) > 192) {
